@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="rs"></h1> <br> <br>
+
+<button id="btm" onclick="change()" name="Chơi">Chơi</button>
+<script>
+    let btm = document.getElementById('btm').value;
+    result = document.getElementById('rs');
+
+    function change()
+    {
+        let num1 = +prompt('Nhập số thấp nhất:');
+        let num2 = +prompt('Nhập vào số lớn nhất:');
+        let count = 0;
+        while (count < 3) {
+            let num3 = +prompt('Người dùng nhập số muốn đoán');
+            let random = Math.floor(Math.random() * ((num2 - num1) + 1) + num1);
+
+            if (random === num3) {
+                result.innerHTML = ('Chúc mừng');
+                break
+            }
+            else if (random > num3)
+                alert('Bé hơn số bí mật');
+                else if (random < num3)
+                alert('lớn hơn số bí mật');
+            count++;
+        }
+
+    }
+
+</script>
+</body>
+</html>
