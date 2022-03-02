@@ -18,8 +18,9 @@
         let num2 = +prompt('Nhập vào số lớn nhất:');
         let count = 0;
         while (count < 3) {
+            let random = Math.floor(Math.random() * (num2 - num1) + 1);
+            console.log(random)
             let num3 = +prompt('Người dùng nhập số muốn đoán');
-            let random = Math.floor(Math.random() * ((num2 - num1) + 1) + num1);
 
             if (random === num3) {
                 result.innerHTML = ('Chúc mừng');
